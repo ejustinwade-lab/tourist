@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang<="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mabini Tourism - Discover Paradise</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes wave {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      25% { transform: translateX(-5px) translateY(-5px); }
+      75% { transform: translateX(5px) translateY(5px); }
+    }
+    
+    .wave-animation {
+      animation: wave 4s ease-in-out infinite;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full overflow-auto">
+  <div id="app" class="w-full h-full"><!-- Navigation -->
+   <nav id="nav" class="w-full py-4 px-6 fixed top-0 z-50 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+     <div class="flex items-center gap-2">
+      <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18" fill="#0EA5E9" opacity="0.2" /> <path d="M20 8C13.4 8 8 13.4 8 20C8 26.6 13.4 32 20 32C26.6 32 32 26.6 32 20C32 13.4 26.6 8 20 8ZM20 28C15.6 28 12 24.4 12 20C12 15.6 15.6 12 20 12C24.4 12 28 15.6 28 20C28 24.4 24.4 28 20 28Z" fill="#0EA5E9" /> <circle cx="20" cy="16" r="2" fill="#FCD34D" /> <path d="M16 20L18 24L20 22L22 24L24 20" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><span id="nav-title" class="text-xl font-bold">Mabini</span>
+     </div>
+     <div class="flex gap-6"><a href="#home" id="nav-home" class="hover:opacity-80 transition-opacity">Home</a> <a href="#about" id="nav-about" class="hover:opacity-80 transition-opacity">About</a> <a href="#attractions" id="nav-attractions" class="hover:opacity-80 transition-opacity">Attractions</a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="hero" class="w-full min-h-screen flex items-center justify-center relative pt-16">
+    <div class="absolute inset-0 overflow-hidden"><!-- Ocean waves SVG background -->
+     <svg class="wave-animation absolute bottom-0 w-full" viewbox="0 0 1440 320" preserveaspectratio="none" style="height: 60%;"><path fill="#0EA5E9" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+     </svg>
+     <svg class="wave-animation absolute bottom-0 w-full" viewbox="0 0 1440 320" preserveaspectratio="none" style="height: 50%; animation-delay: -2s;"><path fill="#0EA5E9" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,181.3C672,181,768,203,864,213.3C960,224,1056,224,1152,208C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+     </svg>
+    </div>
+    <div class="max-w-4xl mx-auto text-center px-6 z-10 relative">
+     <div class="float-animation mb-8">
+      <svg width="120" height="120" viewbox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto"><circle cx="60" cy="60" r="50" fill="#FCD34D" opacity="0.3" /> <circle cx="60" cy="45" r="15" fill="#FCD34D" /> <path d="M20 70C20 70 30 85 60 85C90 85 100 70 100 70" stroke="#0EA5E9" stroke-width="4" stroke-linecap="round" /> <path d="M25 75C25 75 35 88 60 88C85 88 95 75 95 75" stroke="#06B6D4" stroke-width="3" stroke-linecap="round" />
+      </svg>
+     </div>
+     <h1 id="hero-title" class="text-6xl md:text-7xl font-bold mb-6">Discover Mabini</h1>
+     <p id="hero-subtitle" class="text-xl md:text-2xl mb-8 opacity-90">Where Crystal Waters Meet Tropical Paradise</p><button id="cta-button" class="px-8 py-4 rounded-full text-lg font-semibold transition-all hover:scale-105 shadow-lg"> Explore Now </button>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="w-full py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 id="about-title" class="text-4xl md:text-5xl font-bold text-center mb-12">About Mabini</h2>
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+       <svg width="100%" height="300" viewbox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" fill="#0EA5E9" opacity="0.1" rx="20" /> <circle cx="200" cy="80" r="40" fill="#FCD34D" /> <path d="M50 200C50 200 100 150 200 150C300 150 350 200 350 200L350 280C350 280 300 250 200 250C100 250 50 280 50 280L50 200Z" fill="#0EA5E9" /> <path d="M50 220C50 220 100 170 200 170C300 170 350 220 350 220L350 290C350 290 300 260 200 260C100 260 50 290 50 290L50 220Z" fill="#06B6D4" opacity="0.7" /> <ellipse cx="100" cy="240" rx="15" ry="8" fill="#10B981" opacity="0.6" /> <ellipse cx="140" cy="250" rx="20" ry="10" fill="#10B981" opacity="0.6" /> <ellipse cx="260" cy="245" rx="18" ry="9" fill="#10B981" opacity="0.6" /> <ellipse cx="310" cy="255" rx="22" ry="11" fill="#10B981" opacity="0.6" />
+       </svg>
+      </div>
+      <div>
+       <p id="about-text" class="text-lg leading-relaxed mb-6">Nestled in the province of Batangas, Mabini is a hidden gem offering pristine beaches, world-class diving spots, and breathtaking natural beauty. Known for its crystal-clear waters and vibrant marine life, Mabini is the perfect destination for adventure seekers and beach lovers alike.</p>
+       <div class="grid grid-cols-3 gap-4 mt-8">
+        <div class="text-center p-4 rounded-lg">
+         <div class="text-3xl mb-2">
+          🏖️
+         </div>
+         <div class="text-sm font-semibold">
+          Beautiful Beaches
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-lg">
+         <div class="text-3xl mb-2">
+          🤿
+         </div>
+         <div class="text-sm font-semibold">
+          Diving Paradise
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-lg">
+         <div class="text-3xl mb-2">
+          🌴
+         </div>
+         <div class="text-sm font-semibold">
+          Tropical Vibes
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Attractions Section -->
+   <section id="attractions" class="w-full py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 id="attractions-title" class="text-4xl md:text-5xl font-bold text-center mb-16">Top Attractions</h2>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Attraction 1 -->
+      <div class="rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-105">
+       <div class="h-48 flex items-center justify-center">
+        <svg width="200" height="180" viewbox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="180" fill="#0EA5E9" opacity="0.2" rx="10" /> <path d="M20 120C20 120 50 90 100 90C150 90 180 120 180 120L180 160L20 160L20 120Z" fill="#0EA5E9" /> <path d="M40 130C40 130 60 110 100 110C140 110 160 130 160 130L160 160L40 160L40 130Z" fill="#06B6D4" /> <circle cx="100" cy="50" r="15" fill="#FCD34D" /> <path d="M60 140L80 155L90 145L100 160L110 145L120 155L140 140" stroke="#10B981" stroke-width="3" stroke-linecap="round" />
+        </svg>
+       </div>
+       <div class="p-6">
+        <h3 id="attraction-1-name" class="text-xl font-bold mb-3">Anilao Dive Sites</h3>
+        <p id="attraction-1-desc" class="text-sm opacity-80">Explore some of the best macro diving spots in the world with incredible biodiversity.</p>
+       </div>
+      </div><!-- Attraction 2 -->
+      <div class="rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-105">
+       <div class="h-48 flex items-center justify-center">
+        <svg width="200" height="180" viewbox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="180" fill="#10B981" opacity="0.2" rx="10" /> <ellipse cx="100" cy="140" rx="80" ry="30" fill="#10B981" opacity="0.4" /> <path d="M50 120L70 80L90 100L110 70L130 95L150 85L170 110" stroke="#10B981" stroke-width="4" stroke-linecap="round" fill="none" /> <circle cx="70" cy="80" r="8" fill="#EF4444" /> <circle cx="110" cy="70" r="8" fill="#EF4444" /> <circle cx="150" cy="85" r="8" fill="#EF4444" /> <path d="M60 140L80 130L100 135L120 125L140 132L160 127" stroke="#059669" stroke-width="5" stroke-linecap="round" />
+        </svg>
+       </div>
+       <div class="p-6">
+        <h3 id="attraction-2-name" class="text-xl font-bold mb-3">Sombrero Island</h3>
+        <p id="attraction-2-desc" class="text-sm opacity-80">A picturesque island perfect for snorkeling and underwater photography.</p>
+       </div>
+      </div><!-- Attraction 3 -->
+      <div class="rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-105">
+       <div class="h-48 flex items-center justify-center">
+        <svg width="200" height="180" viewbox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="180" fill="#F59E0B" opacity="0.2" rx="10" /> <path d="M30 140C30 140 60 110 100 110C140 110 170 140 170 140L170 165L30 165L30 140Z" fill="#FCD34D" /> <path d="M50 150C50 150 70 130 100 130C130 130 150 150 150 150L150 165L50 165L50 150Z" fill="#F59E0B" opacity="0.6" /> <circle cx="100" cy="60" r="18" fill="#FCD34D" /> <rect x="75" y="90" width="10" height="30" fill="#92400E" rx="2" /> <ellipse cx="80" cy="85" rx="25" ry="15" fill="#10B981" /> <rect x="115" y="95" width="10" height="25" fill="#92400E" rx="2" /> <ellipse cx="120" cy="90" rx="20" ry="12" fill="#10B981" />
+        </svg>
+       </div>
+       <div class="p-6">
+        <h3 id="attraction-3-name" class="text-xl font-bold mb-3">Mainit Point</h3>
+        <p id="attraction-3-desc" class="text-sm opacity-80">Relax at this serene beach with golden sand and calm, clear waters.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer id="footer" class="w-full py-12 px-6 text-center">
+    <div class="max-w-6xl mx-auto">
+     <div class="flex justify-center gap-2 mb-6">
+      <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18" fill="#0EA5E9" opacity="0.2" /> <path d="M20 8C13.4 8 8 13.4 8 20C8 26.6 13.4 32 20 32C26.6 32 32 26.6 32 20C32 13.4 26.6 8 20 8ZM20 28C15.6 28 12 24.4 12 20C12 15.6 15.6 12 20 12C24.4 12 28 15.6 28 20C28 24.4 24.4 28 20 28Z" fill="#0EA5E9" /> <circle cx="20" cy="16" r="2" fill="#FCD34D" /> <path d="M16 20L18 24L20 22L22 24L24 20" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+     </div>
+     <p id="footer-text" class="opacity-70">© 2024 Mabini Tourism. All rights reserved.</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#E0F2FE",
+      surface_color: "#FFFFFF",
+      text_color: "#0F172A",
+      primary_action_color: "#0EA5E9",
+      secondary_action_color: "#06B6D4",
+      font_family: "system-ui, -apple-system, sans-serif",
+      font_size: 16,
+      hero_title: "Discover Mabini",
+      hero_subtitle: "Where Crystal Waters Meet Tropical Paradise",
+      cta_button: "Explore Now",
+      about_title: "About Mabini",
+      about_text: "Nestled in the province of Batangas, Mabini is a hidden gem offering pristine beaches, world-class diving spots, and breathtaking natural beauty. Known for its crystal-clear waters and vibrant marine life, Mabini is the perfect destination for adventure seekers and beach lovers alike.",
+      attractions_title: "Top Attractions",
+      attraction_1_name: "Anilao Dive Sites",
+      attraction_2_name: "Sombrero Island",
+      attraction_3_name: "Mainit Point",
+      footer_text: "© 2024 Mabini Tourism. All rights reserved."
+    };
+
+    async function onConfigChange(config) {
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const baseFontSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = 'system-ui, -apple-system, sans-serif';
+
+      document.body.style.backgroundColor = backgroundColor;
+      document.body.style.color = textColor;
+      document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.body.style.fontSize = `${baseFontSize}px`;
+
+      document.getElementById('app').style.backgroundColor = backgroundColor;
+
+      // Nav
+      document.getElementById('nav').style.backgroundColor = surfaceColor;
+      document.getElementById('nav').style.color = textColor;
+      document.getElementById('nav-title').style.color = textColor;
+      document.getElementById('nav-title').style.fontSize = `${baseFontSize * 1.25}px`;
+      document.getElementById('nav-home').style.color = textColor;
+      document.getElementById('nav-about').style.color = textColor;
+      document.getElementById('nav-attractions').style.color = textColor;
+
+      // Hero
+      document.getElementById('hero').style.backgroundColor = backgroundColor;
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-title').style.color = textColor;
+      document.getElementById('hero-title').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('hero-title').style.fontSize = `${baseFontSize * 2}px`;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('hero-subtitle').style.color = textColor;
+      document.getElementById('hero-subtitle').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('hero-subtitle').style.fontSize = `${baseFontSize * 1.25}px`;
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('cta-button').style.backgroundColor = primaryActionColor;
+      document.getElementById('cta-button').style.color = surfaceColor;
+      document.getElementById('cta-button').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('cta-button').style.fontSize = `${baseFontSize * 1.125}px`;
+
+      // About
+      document.getElementById('about').style.backgroundColor = surfaceColor;
+      document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+      document.getElementById('about-title').style.color = textColor;
+      document.getElementById('about-title').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('about-title').style.fontSize = `${baseFontSize * 1.875}px`;
+      document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+      document.getElementById('about-text').style.color = textColor;
+      document.getElementById('about-text').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('about-text').style.fontSize = `${baseFontSize * 1.125}px`;
+
+      // Attractions
+      document.getElementById('attractions').style.backgroundColor = backgroundColor;
+      document.getElementById('attractions-title').textContent = config.attractions_title || defaultConfig.attractions_title;
+      document.getElementById('attractions-title').style.color = textColor;
+      document.getElementById('attractions-title').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('attractions-title').style.fontSize = `${baseFontSize * 1.875}px`;
+      
+      const attractionCards = document.querySelectorAll('#attractions > div > div > div');
+      attractionCards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+      });
+
+      document.getElementById('attraction-1-name').textContent = config.attraction_1_name || defaultConfig.attraction_1_name;
+      document.getElementById('attraction-1-name').style.color = textColor;
+      document.getElementById('attraction-1-name').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('attraction-1-name').style.fontSize = `${baseFontSize * 1.25}px`;
+      
+      document.getElementById('attraction-2-name').textContent = config.attraction_2_name || defaultConfig.attraction_2_name;
+      document.getElementById('attraction-2-name').style.color = textColor;
+      document.getElementById('attraction-2-name').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('attraction-2-name').style.fontSize = `${baseFontSize * 1.25}px`;
+      
+      document.getElementById('attraction-3-name').textContent = config.attraction_3_name || defaultConfig.attraction_3_name;
+      document.getElementById('attraction-3-name').style.color = textColor;
+      document.getElementById('attraction-3-name').style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.getElementById('attraction-3-name').style.fontSize = `${baseFontSize * 1.25}px`;
+
+      const attractionDescs = document.querySelectorAll('[id$="-desc"]');
+      attractionDescs.forEach(desc => {
+        desc.style.color = textColor;
+        desc.style.fontSize = `${baseFontSize * 0.875}px`;
+      });
+
+      // Footer
+      document.getElementById('footer').style.backgroundColor = surfaceColor;
+      document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+      document.getElementById('footer-text').style.color = textColor;
+      document.getElementById('footer-text').style.fontSize = `${baseFontSize}px`;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["cta_button", config.cta_button || defaultConfig.cta_button],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["about_text", config.about_text || defaultConfig.about_text],
+        ["attractions_title", config.attractions_title || defaultConfig.attractions_title],
+        ["attraction_1_name", config.attraction_1_name || defaultConfig.attraction_1_name],
+        ["attraction_2_name", config.attraction_2_name || defaultConfig.attraction_2_name],
+        ["attraction_3_name", config.attraction_3_name || defaultConfig.attraction_3_name],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b6fc62e6594403a',t:'MTc2NzI0Njk5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html> 
